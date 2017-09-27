@@ -1,0 +1,30 @@
+*{
+	outline:1px solid black !important;
+}
+
+*{
+	
+	box-sizing: border-box;
+}
+.title{
+	text-align: center;
+	background-color: #33bebe;
+
+}
+
+.content {
+    display: flex;
+}
+
+.screenshot{
+	
+	max-width: 460px;
+	
+}
+
+.description{
+	max-width: 705px;
+	color: #7c8b88;
+	margin: 1em 1em 1em 1em
+
+}
