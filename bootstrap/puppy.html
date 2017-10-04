@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -6,16 +6,18 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Priyadharshan Ravi</title>
-		<link rel="stylesheet" type="text/css" href="C:\Users\Priyadharshan\Downloads\Programs\HTML_CSS\bootstrap\css\bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="C:\Users\Priyadharshan\Downloads\Fullstackweb\HTML_CSS\bootstrap\css\bootstrap.css">
 		<link href="https://fonts.googleapis.com/css?family=Pangolin" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="C:\Users\Priyadharshan\Downloads\Programs\HTML_CSS\bootstrap\css\style.css">
+		<link rel="stylesheet" type="text/css" href="C:\Users\Priyadharshan\Downloads\Fullstackweb\HTML_CSS\bootstrap\css\style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</head>
 	<body>
 		<!-- title -->
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 hotspot-wrapper">	
-					<img src="C:\Users\Priyadharshan\Downloads\Programs\HTML_CSS\bootstrap\images\profile.jpeg" alt="profile picture" height="150" width="150" class="img-circle img-responsive" style="margin: 10px;">
+					<img src="C:\Users\Priyadharshan\Downloads\Fullstackweb\HTML_CSS\bootstrap\images\profile.jpeg" alt="profile picture" height="150" width="150" class="img-circle img-responsive" style="margin: 10px;">
 				</div>
 				<div class="col-md-6 text-right text-uppercase">
 					<h1>Priyadharshan Ravi</h1>
@@ -35,7 +37,7 @@
 			<div class="row">
 				<div class="col-md-6 hotspot-wrapper" style="overflow: hidden;">
 							<a href="https://priyadharshanravi.wordpress.com/">
-							<img src="C:\Users\Priyadharshan\Downloads\Programs\HTML_CSS\bootstrap\images\middlee.jpg" alt="life lessons" class="img-responsive img-rounded center-block">	
+							<img src="C:\Users\Priyadharshan\Downloads\Fullstackweb\HTML_CSS\bootstrap\images\middlee.jpg" alt="life lessons" class="img-responsive img-rounded center-block">	
 							</a>
 				</div>
 				<div class="col-md-6">
@@ -71,26 +73,46 @@
 			<div class="container" >
 			<div class="jumbotron" style="background: rgba(200, 54, 54, 0.0);">
 			<div class="row">
-				<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 hotspot-wrapper">
-					<a href="https://priyadharshanravi.wordpress.com/2017/06/17/an-unposted-letter/">
-						<img src="C:\Users\Priyadharshan\Downloads\Programs\HTML_CSS\bootstrap\images\1.jpg" alt="unposted-letter" class="img-rounded center-block img-responsive" height="300" width="300">
-					</a><br>
-					<h4 class="text-uppercase text-center">An unposted letter</h4>
-				</div>
-				
-				<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 hotspot-wrapper">
-					<a href="https://priyadharshanravi.wordpress.com/2017/01/08/known-strangers/">
-						<img src="C:\Users\Priyadharshan\Downloads\Programs\HTML_CSS\bootstrap\images\2.jpg" alt="known-strangers" class="img-rounded center-block img-responsive" height="300" width="300">
-					</a><br>
-					<h4 class="text-uppercase text-center">Known Stranger</h4>
-				</div>
-				
-				<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 hotspot-wrapper">
-					<a href="https://priyadharshanravi.wordpress.com/2016/03/31/college-life/">
-						<img src="C:\Users\Priyadharshan\Downloads\Programs\HTML_CSS\bootstrap\images\3.jpg" alt="college-life" class="img-rounded center-block img-responsive" height="300" width="300">
-					</a><br>
-					<h4 class="text-uppercase text-center">College life</h4>
-				</div>
+				<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	  				<!-- Indicators -->
+	  				<ol class="carousel-indicators">
+	    			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+	    			<li data-target="#myCarousel" data-slide-to="1"></li>
+	    			<li data-target="#myCarousel" data-slide-to="2"></li>
+	  				</ol>
+
+	  				<!-- Wrapper for slides -->
+  					<div class="carousel-inner col-md-12">
+
+						<div class="item active">
+							<a href="https://priyadharshanravi.wordpress.com/2017/06/17/an-unposted-letter/">
+								<img src="C:\Users\Priyadharshan\Downloads\Fullstackweb\HTML_CSS\bootstrap\images\1.jpg" alt="unposted-letter" class="img-rounded center-block img-responsive" style="width: 50%;" height="300">
+							</a><br>
+							<h4 class="text-uppercase text-center">An unposted letter</h4>
+						</div>
+						
+						<div class="item">
+							<a href="https://priyadharshanravi.wordpress.com/2017/01/08/known-strangers/">
+								<img src="C:\Users\Priyadharshan\Downloads\Fullstackweb\HTML_CSS\bootstrap\images\2.jpg" alt="known-strangers" class="img-rounded center-block img-responsive" style="width: 50%;" height="300">
+							</a><br>
+							<h4 class="text-uppercase text-center">Known Stranger</h4>
+						</div>
+						
+						<div class="item">
+							<a href="https://priyadharshanravi.wordpress.com/2016/03/31/college-life/">
+								<img src="C:\Users\Priyadharshan\Downloads\Fullstackweb\HTML_CSS\bootstrap\images\3.jpg" alt="college-life" class="img-rounded center-block img-responsive" style="width: 50%;" height="300">
+							</a><br>
+							<h4 class="text-uppercase text-center">College life</h4>
+						</div>
+					</div>
+					<!-- Left and right controls -->
+  					<a class="carousel-control left" href="#myCarousel" data-slide="prev">
+            		<span class="glyphicon glyphicon-chevron-left"></span>
+        			</a>
+        			<a class="carousel-control right" href="#myCarousel" data-slide="next">
+            		<span class="glyphicon glyphicon-chevron-right"></span>
+        			</a>	
+				</div>	
 			</div>
 
 			<!-- rule -->
@@ -108,3 +130,9 @@
 		</div>		
 	</body>
 </html>
+
+
+
+
+  
+    
