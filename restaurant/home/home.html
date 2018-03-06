@@ -21,25 +21,16 @@
 			<div class="col-md-3 hotspot-wrapper">
 				<img src="C:\Users\Priyadharshan\Downloads\Fullstackweb\HTML_CSS\restaurant\images\Popeye_cover.jpg" alt="logo" height="150" width="150" class="rounded-circle img-circle img-responsive center-block">
 			</div>
-			<div class="col-md-6 text-center text-uppercase">
+			<div class="col-md-9  text-center text-uppercase">
 				<br><h1>Cartoon's Cafe</h1>
 			</div>
-			<div class="col-md-3">
-				<br><br>
-        		<div class="dropdown">
-  				<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    			Explore
-  				</button>
-					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-					    <a class="dropdown-item" href="#home">Home</a>
-					    <a class="dropdown-item" href="#">Menu</a>
-					    <a class="dropdown-item" href="#about">About Us</a>
-					    <a class="dropdown-item" href="#">Gallery</a>
-					    <a class="dropdown-item" href="#">Order Online</a>
-					    <a class="dropdown-item" href="#">Cart</a>
-					</div>
-				</div>							
-      		</div>			
+
+			<!--break-->
+			<div class="row">
+				<div class="col-md-12">
+					<hr>	
+				</div>
+			</div>				
 		</div>
 	
 		<!--break-->
@@ -48,6 +39,42 @@
 				<hr>	
 			</div>
 		</div>
+
+			<!--menu-->
+			<div class="row">
+				<div class="col-md-12">
+					<div class="topnav" id="myTopnav">
+					  <a href="#home" class="active">Home</a>
+					  <a href="#menu">Menu</a>
+					  <a href="#about">About</a>
+					  <a href="#gallery">Gallery</a>
+					  <a href="#orderonline">Order Online</a>
+					  <a href="#cart">Cart</a>
+					  <div class="topnav-right">
+					  	<a href="#signin">Sign In/Up</a>
+					  </div>
+					  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+					</div>	
+
+					<script>
+					function myFunction() {
+					    var x = document.getElementById("myTopnav");
+					    if (x.className === "topnav") {
+					        x.className += " responsive";
+					    } else {
+					        x.className = "topnav";
+					    }
+					}
+					</script>						
+      			</div>	
+			</div>	
+		<!--break-->
+		<div class="row">
+			<div class="col-md-12">
+				<hr>	
+			</div>
+		</div>
+				
 
 
 		<!--center-->
@@ -95,7 +122,7 @@
 		<div class="row" id="about">
 			<div class="col-md-12">
 				<div class="heading-title text-center">
-                <h3 class="text-uppercase">Meet Our Team</h3>
+                <h3 class="text-uppercase">Meet Our Team</h3><br>
                 <p>"Engala pathi perusa soldrathuku onnum illa"</p>
             	</div><br><br>	
 			</div>	  
@@ -234,7 +261,7 @@
 
 		<!--footer-->
 		<footer class="container-fluid text-center">
-  		<p>Designed by Priyan</p>
+			<p>&copy; Piriyadharshan Ravi <p>
 		</footer>
 	</div>
 </body>
