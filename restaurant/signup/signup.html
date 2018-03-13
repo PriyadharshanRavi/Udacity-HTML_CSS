@@ -12,174 +12,119 @@
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="C:\Users\Priyadharshan\Downloads\Fullstackweb\HTML_CSS\restaurant\signup\style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="C:\Users\Priyadharshan\Downloads\Fullstackweb\HTML_CSS\restaurant\signup\form.js"></script>
 	<script type="text/javascript">
-		$(function() {
-		    $('#login-form-link').click(function(e) {
-		    	$("#login-form").delay(100).fadeIn(100);
-		 		$("#register-form").fadeOut(100);
-				$('#register-form-link').removeClass('active');
-				$(this).addClass('active');
-				e.preventDefault();
-			});
-			$('#register-form-link').click(function(e) {
-				$("#register-form").delay(100).fadeIn(100);
-		 		$("#login-form").fadeOut(100);
-				$('#login-form-link').removeClass('active');
-				$(this).addClass('active');
-				e.preventDefault();
-			});
-		});
-
+		H5F.listen(window,"load",function () {
+			H5F.setup(document.getElementById("signup"));
+		},false);
 	</script>
 </head>
-<body>
+<body background="C:\Users\Priyadharshan\Downloads\Fullstackweb\HTML_CSS\restaurant\images\signup.png" style="background-size: cover;">
 	<div class="container">
 		<!--Signup title-->
 	    <div class="row">
 	      <div class="col-md-12 text-center">
-	        <h1>We know that you will be hungry, but we couldn't recognize you...</h1><br>
-	        <h3>Please Login</h3><br>
+	        <h1>Welcome to Cartoon's Cafe</h1><br>
 	      </div>
 	    </div>
 
+	    <!--signup form-->
+	    <form id="signup">
+  			<center><h1>Sign Up</h1></center>
+  			<h2>Fields marked (*) are required</h2>
+  				<fieldset>
+   					<ul>
+				    	<li>
+				     		<label for="firstname">First Name *</label>  	<input type="text" id="firstname" name="firstname" placeholder="First Name" required />
+				    	</li>
+				    	<li>
+				    		<label for="lastname">Last Name *</label> 
+				    			<input type="text" id="lastname" name="lastname" placeholder="Last Name" required />
+				    	</li>
+				    	<li>
+				    		<label for="lastname">Date of Birth *</label> 
+				    			<input type="Date" placeholder="Enter Date of birth" name="DOB" required>
+				    	</li>
+				    	<li>
+				     		<label for="email">Email *</label> 
+				     			<input type="email" id="email" name="email" title="Please enter a valid email" required />
+				     			<p class="validation01">
+				      			<span class="invalid">Please enter a valid email address e.g. swapnil@example.com</span>
+				      			<span class="valid">Your email address is now valid</span>
+				     			</p>
+				    	</li>		
+				       	<li>
+				    		<label for="password">Password *</label>
+				    		<input id="password" name="password" type="password" title="Minimum 8 characters, one number, one uppercase and one lowercase letter" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*" required /> 
+				     		<p class="validation01">
+				      		<span class="invalid">Minimum 8 characters, one number, one uppercase letter and one lowercase letter</span>
+				     		</p>
+				    	</li>
+				    	<li>
+				     		<label for="password">Re-Password *</label>
+				     		<input id="password" name="password" type="password" title="Minimum 8 characters, one number, one uppercase and one lowercase letter" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*" required /> 
+				    		<p class="validation01">
+				      		<span class="invalid">Minimum 8 characters, one number, one uppercase letter and one lowercase letter</span>
+				     		</p>
+				    	</li>		
+				    	<li>
+				     		<label for="username">General *</label>
+				     		<input id="radio" name="radio" type="radio" required />Male <input id="radio" name="radio" type="radio" required />Female
+				    	</li>				
+				    	<li>
+				     		<label for="tel">Mobile *</label> 
+				     		<input type="tel" id="tel" name="tel" pattern="\d{10}" placeholder="Enter valid Mobile Number" required />
+				     		<p class="validation01">
+				     		<span class="invalid">No spaces or brackets</span>
+				      		<span class="valid">Your mobile number is valid</span>
+				     		</p>
+				    	</li>
+				    	<li>
+				     		<label for="state">Security Questions * </label>
+				     		<select name="state" id="state">
+				      		<option selected>1.who is your fav teacher?</option>
+				      		<option>2.which is your fav colour?</option>
+				      		<option>3.which is your fav place in India?</option>
+				      		<option>4.which is your fav pet name?</option>
+				      		<option>5.which is your fav sports</option>
+				      		<option>6.which is your fav Book?</option> 
+				      	</select>	
+				    	</li>
+				    	<li>
+				     		<label for="Sec">Security Answer *</label> 
+				     		<input type="text" placeholder="Enter Answer" name="Answer" required>
+				    	</li>		   			
+				    	<li>
+				     		<label for="address">Address *</label>
+				     		<textarea id="address" name="address" type="text" required></textarea>
+				    	</li>		   
+				    	<li>
+				     		<label for="postcode">Post code *</label>
+				     		<input id="postcode" name="postcode" type="number" min="10001" max="999999" maxlength="6" required />
+				     		<p class="validation01">
+				      		<span class="invalid">Your postcode is out of range between 10001 - 999999</span>
+				       		<span class="valid">Your postcode is in the correct range</span>
+				     		</p>
+				    	</li>		
+				    	<li>
+				     		<label for="username">Agree to T & C *</label>
+				     		<input id="checkbox" name="checkbox" type="checkbox" required />
+				    	</li>			
+				   	</ul>
+				</fieldset>
+				<center><a href="C:\Users\Priyadharshan\Downloads\Fullstackweb\HTML_CSS\restaurant\home\home.html"><input type="submit" value="Sign up"/></a></center>
+		</form>
+		<!--break-->
+      <div class="row">
+         <div class="col-md-12">
+            <hr>  
+         </div>
+      </div>
 
-		<!--Login-->
-		<div class="row">
-			<div class="col-md-6 col-md-offset-3">
-				<div class="panel panel-login">
-					<div class="panel-heading">
-						<div class="row">
-							<div class="col-xs-6">
-								<a href="#" class="active" id="login-form-link">Login</a>
-							</div>
-							<div class="col-xs-6">
-								<a href="#" id="register-form-link">Register</a>
-							</div><br>
-						</div>
-						<hr>
-					</div>
-					<div class="panel-body">
-						<div class="row">
-							<div class="col-lg-12">
-								<form id="login-form" action="C:\Users\Priyadharshan\Downloads\Fullstackweb\HTML_CSS\restaurant\home\home.html" method="post" role="form" style="display: block;">
-									<div class="form-group">
-										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
-									</div>
-									<div class="form-group">
-										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
-									</div>
-									<div class="form-group text-center">
-										<input type="checkbox" tabindex="3" class="" name="remember" id="remember">
-										<label for="remember"> Remember Me</label>
-									</div>
-									<div class="form-group">
-										<div class="row">
-											<div class="col-sm-6 col-sm-offset-3">
-												<input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="row">
-											<div class="col-lg-12">
-												<div class="text-center">
-													<a href="#" tabindex="5" class="forgot-password">Forgot Password?</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</form>
-								<form id="register-form" action="#" method="post" role="form" style="display: none;">
-									<div class="form-group">
-										<label class="col-md-4 control-label">First Name</label>
-										<div class="col-md-4 inputGroupContainer">
-										<div class="input-group">
-										<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-										<input  name="first_name" placeholder="First Name" class="form-control"  type="text">
-										</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<label class="col-md-4 control-label" >Last Name</label> 
-										<div class="col-md-4 inputGroupContainer">
-										<div class="input-group">
-										<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-										<input name="last_name" placeholder="Last Name" class="form-control"  type="text">
-										</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<label class="col-md-4 control-label">Address</label>
-										<div class="col-md-4 inputGroupContainer">
-										<div class="input-group">
-										<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-										<input  name="address" placeholder="Address" class="form-control"  type="text">
-										</div>
-										</div>
-									</div>
-									<div class="form-group">
-									  	<label class="col-md-4 control-label">Username</label>  
-									  	<div class="col-md-4 inputGroupContainer">
-									  	<div class="input-group">
-									  	<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-									  	<input  name="user_name" placeholder="Username" class="form-control"  type="text">
-									    </div>
-									  	</div>
-									</div>
-									<div class="form-group">
- 										<label class="col-md-4 control-label" >Password</label> 
-    									<div class="col-md-4 inputGroupContainer">
-									    <div class="input-group">
-									  	<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-									  	<input name="user_password" placeholder="Password" class="form-control"  type="password">
-									    </div>
-									  	</div>
-									</div>
-									<div class="form-group">
-										<label class="col-md-4 control-label" >Confirm Password</label> 
-										<div class="col-md-4 inputGroupContainer">
-										<div class="input-group">
-										<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-										<input name="confirm_password" placeholder="Confirm Password" class="form-control"  type="password">
-										</div>
-										</div>
-									</div>
-									<div class="form-group">
-									 	<label class="col-md-4 control-label">E-Mail</label>  
-									    <div class="col-md-4 inputGroupContainer">
-									    <div class="input-group">
-									    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-									  	<input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
-									    </div>
-									  	</div>
-									</div>
-									<div class="form-group">
-								  		<label class="col-md-4 control-label">Contact No.</label>  
-								    	<div class="col-md-4 inputGroupContainer">
-								    	<div class="input-group">
-								        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-								  		<input name="contact_no" placeholder="(639)" class="form-control" type="text">
-								    	</div>
-								  		</div>
-									</div>
-									<div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Success!.</div>
-									<div class="form-group">
-									  	<label class="col-md-4 control-label"></label>
-									  	<div class="col-md-4"><br>
-									    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button type="submit" class="btn btn-warning" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSUBMIT <span class="glyphicon glyphicon-send"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
-									  	</div>
-									</div>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!--footer-->
-	<footer class="container-fluid text-center">
-		<p>&copy; Piriyadharshan Ravi <p>
-	</footer>
-		</div>	
+      <!--footer-->
+      <footer class="container-fluid text-center">
+         <p>&copy; Piriyadharshan Ravi <p>
+      </footer>
 	</div>
 </body>
 </html>
