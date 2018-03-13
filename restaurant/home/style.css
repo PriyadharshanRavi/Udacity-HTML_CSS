@@ -2,7 +2,12 @@ body{
 	font-family: 'Montserrat', sans-serif;
 }
 
-
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
 
 .hotspot-wrapper {
   position: relative;
