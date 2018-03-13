@@ -11,12 +11,7 @@
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="C:\Users\main2_20\Desktop\site\signin\style.css">
-	<script type="text/javascript" src="C:\Users\main2_20\Desktop\site\signup\form.js"></script>
-	<script type="text/javascript">
-		H5F.listen(window,"load",function () {
-			H5F.setup(document.getElementById("signup"));
-		},false);
-	</script>
+	
 </head>
 <body background="C:\Users\main2_20\Desktop\site\images\signin.jpg" style="background-size: cover;">
 	<div class="container">
@@ -39,17 +34,17 @@
       	<div class="col-md-12 text-center">
       		<br><br><h1 class="text-center">Sign In</h1>
       		<form accept="C:\Users\main2_20\Desktop\site\home\home.html" method="post"><br><br><br>
-      			Username: <input type="text" name="username" required><br><br>
-      			<p class="validation01">
-				      			<span class="invalid">Please enter a valid email address e.g. swapnil@example.com</span>
-				      			<span class="valid"> </span>
-				</p>
+      			Username: <input type="text" name="username" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required><br><br>
+      			
       			Password: <input type="password" name="password" required><br><br>
       			<a href="C:\Users\main2_20\Desktop\site\home\home.html"><input type="submit" value="Sign In"></a><br><br>
-      			<a href="C:\Users\main2_20\Desktop\site\signup\signup.html"><input type="submit" value="Sign Up"></a><br><br>
-
+      			
       		</form>
+		<a href="C:\Users\main2_20\Desktop\site\signup\signup.html"><input type="submit" value="Sign Up"></a><br><br>
+		
+
       	</div>
+	      
       </div>
 
       
